@@ -1,5 +1,5 @@
 {
-  "name": "timers-noauth",
+  "name": "timers",
   "version": "1.0.0",
   "author": "",
   "description": "",
@@ -31,20 +31,6 @@
     "lint-staged": "^10.1.4",
     "nodemon": "^2.0.4",
     "prettier": "^2.0.4"
-  },
-  "lint-staged": {
-    "*.js": [
-      "npm run prettify",
-      "npm run lint"
-    ],
-    "*.json": [
-      "npm run prettify"
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "license": "Apache-2.0",
   "repository": {
