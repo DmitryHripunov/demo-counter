@@ -42,7 +42,7 @@ wss.on('connection', async (ws, req) => {
   } catch (err) { console.log(err) }
 
   try {
-    // setInterval(() => {
+    setInterval(() => {
       const payloadTimers = JSON.stringify({
         type: 'active_timers',
         activeTimers: userTimers.filter((timer) => {
@@ -54,7 +54,7 @@ wss.on('connection', async (ws, req) => {
         }),
       });
       ws.send(payloadTimers)
-    // }, 1000)
+    }, 1000);
   } catch (err) { console.log(err) }
 });
 

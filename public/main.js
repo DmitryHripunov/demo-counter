@@ -82,6 +82,7 @@
           body: JSON.stringify({ description }),
         }).then(() => {
           info(`Created new timer "${description}"`);
+          window.location.reload();
         });
       },
       stopTimer(id) {
@@ -89,6 +90,7 @@
           method: "post",
         }).then(() => {
           info(`Stopped the timer [${id}]`);
+          window.location.reload();
         });
       },
       formatTime(ts) {
@@ -129,9 +131,7 @@
       }
     },
     created() {
-      setInterval(() => {
-        this.ws();
-      }, 1000)
+      this.ws();
     },
   });
 })();
